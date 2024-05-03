@@ -1,6 +1,6 @@
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import get_object_or_404, render, redirect, get_list_or_404
 from .models import Book
-from django.views import View
+from django.views import View, generic
 from .forms import BookForm
 
 def index(request):
@@ -18,6 +18,11 @@ def index(request):
         'index.html',
         context={'num_books': num_books, 'num_visits': num_visits},
     )
+
+def book_list(request):
+    book_list = Book.objects.all()
+    return render(request, 'book_list.html', {'book_list': book_list})
+
 
 def book_info(request, pk):
     """View function for book info."""
@@ -38,3 +43,9 @@ class CreateBookView(View):
         else:
             # Si le formulaire n'est pas valide, réafficher le formulaire avec les erreurs
             return render(request, 'create_book.html', {'form': form})
+
+
+
+
+
+
