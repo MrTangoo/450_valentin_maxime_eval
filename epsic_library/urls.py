@@ -23,5 +23,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<int:pk>',views.book_info, name="info"),
     path('create/', views.CreateBookView.as_view(), name='create_book'),
-    path('booklist/', views.book_list, name='book_list'),
+    path('book-list/', views.book_list, name='book_list'),
 ]
