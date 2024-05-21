@@ -69,7 +69,7 @@ class BookListIntegrationTestFixture(TestCase):
         self.assertTemplateUsed(response, 'book_list.html')
 
 
-class BookListUnitTestMocks(TestCase):
+class BookListUnitTestMock(TestCase):
 
     @patch('library.views.Book.objects.all')
     def test_book_list_with_mock(self, mock_all):
