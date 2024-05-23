@@ -1,4 +1,3 @@
-[![Python application](https://github.com/MrTangoo/450_valentin_maxime_eval/actions/workflows/python-app.yml/badge.svg)](https://github.com/MrTangoo/450_valentin_maxime_eval/actions/workflows/python-app.yml)
 
 
 # Librairie EPSIC
